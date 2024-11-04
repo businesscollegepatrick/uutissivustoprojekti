@@ -1,0 +1,168 @@
+/* TÄMÄ CSS */
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cc0099;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #ffcccc;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #ff99ff;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header h2 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.weather-forecast {
+    background-color: #fff;
+    padding: 15px;
+    border: 3px solid #ff99cc;
+    margin: 20px;
+}
+
+.weather-forecast h3 {
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.forecast-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    width: 15%;
+    background-color: #f0e6ff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Uutisten osio ja tekstiboksit */
+.news-section {
+    background-color: #fff;
+    border: 3px solid #ff99cc;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(70%);
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.news-item {
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0e6ff;
+}
+
+.news-item:last-child {
+    margin-right: 0;
+    justify-content: spa
+}
+
+.news-item h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.news-section ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.news-section li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Vierailijat ja kirjoittajat (BLOGI) */
+.sidebar {
+    width: 300px;
+    border: 2px solid #d4a5d9;
+    padding: 15px;
+    background-color: #f8e1ff;
+    float: right;
+    flex: 1;
+    margin: 20px;
+    margin-left: auto;
+    width: 20%
+}
+
+.sidebar h4 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.sidebar p {
+    border-bottom: 1px solid #d4a5d9;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar p:last-child {
+    border-bottom: none;
+}
+/* Weather Forecast Styles */
+.weather-forecast {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.weather-forecast h2 {
+    font-size: 1.5em;
+    color: #a10081;
+}
+
+.weather-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid #a10081;
+    padding: 10px;
+    background-color: #fce4f8;
+}
+
+.weather-day {
+    width: 150px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #a10081;
+    border-radius: 8px;
+    text-align: center;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+.weather-day .date {
+    font-weight: bold;
+    color: #a10081;
+}
+
+.weather-day p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
