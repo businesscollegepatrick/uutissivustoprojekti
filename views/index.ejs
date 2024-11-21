@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Uutiset</title>
+</head>
+<body>
+    <div class="header">
+        <h1><i>Satuvaltakunnan tarinat</i></h1>
+        <h1><i>Uutisia lumotusta maasta</i></h1>
+    </div>
+    <div class="weather-forecast">
+        <h2>Viikon sää - viikko 1</h2>
+        <div class="weather-grid">
+            <% weatherData.saa.paiva.forEach(item => { %>
+                <div class="weather-day">
+                    <p class="date"><%= new Date(item.pvm).toLocaleDateString("fi-FI", { day: "2-digit", month: "2-digit", year: "numeric" }) %></p>
+                    <p><strong><%= item.lampotila %> °C</strong></p>
+                    <p>Säätila: <%= item.saatila %></p>
+                    <p>Tuulennopeus: <%= item.tuulennopeus %> m/s</p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <div class="news-section">
+        <ul>
+            <% news.forEach(item => { %>
+                <li><%= item.otsikko %>: <p style="font-size: smaller;"><%= item.julkaisuaika %> || <%= item.kirjoittaja %></p><%= item.sisalto %></li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <h2>Uusimmat uutiset</h2>
+        <ul>
+            <% news.forEach(item => { %>
+                <li><%= item.otsikko %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Vierailevat kirjoittajat</h2>
+        <ul>
+            <% blogi.forEach(item => { %>
+                <li><%= item.nimi %>: <%= item.kuvaus %> "<%= item.kirjoittaja %>"</li>
+            <% }); %>
+        </ul>
+    </div>
+
+
+</body>
+</html>
